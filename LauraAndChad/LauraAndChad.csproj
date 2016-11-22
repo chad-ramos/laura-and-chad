@@ -123,6 +123,7 @@
     <Content Include="Content\app.css" />
     <Content Include="Content\app.js" />
     <Content Include="Content\images\marble.jpg" />
+    <Content Include="Content\images\video.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
@@ -216,6 +217,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dev\_rsvp.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\pioneercode.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\pioneercode.com - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

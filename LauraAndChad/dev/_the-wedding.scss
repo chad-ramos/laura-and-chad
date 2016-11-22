@@ -1,7 +1,8 @@
-﻿
+﻿@import "_settings";
+
 .the-wedding-content {
     @extend .font-primary;
-    padding: 8rem;
+    padding: 8rem 0;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.75);
     height: 100%;

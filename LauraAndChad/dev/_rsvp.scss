@@ -3,7 +3,7 @@
 
 #rsvp {
     @extend .font-primary;
-    padding: 8rem 0 6rem;
+    padding: 4rem 0 2rem;
     background: $primary-color;
     text-align: center;
     color: $white;
@@ -15,5 +15,9 @@
 
     textarea {
         height: 100px;
+    }
+
+    @include breakpoint(medium up) {
+        padding: 8rem 0 6rem;
     }
 }

@@ -11,6 +11,10 @@
   <script src="~/Content/app.js"></script>
 </head>
 <body>
-@RenderBody()
+  <input type="hidden" class="no-js top-bar" />
+  @RenderBody()
+  <script>
+    smoothScroll.init();
+  </script>
 </body>
 </html>

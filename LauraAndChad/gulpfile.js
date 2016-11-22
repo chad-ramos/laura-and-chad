@@ -40,7 +40,8 @@ function libs() {
     'bower_components/foundation-sites/dist/plugins/foundation.core.js',
     'bower_components/foundation-sites/dist/plugins/foundation.responsiveToggle.js',
     'bower_components/foundation-sites/dist/plugins/foundation.util.mediaQuery.js',
-    'bower_components/parallax.js/parallax.js'
+    'bower_components/parallax.js/parallax.js',
+    'bower_components/smooth-scroll.js/dist/js/smooth-scroll.min.js'
   ])
       .pipe(concat('libs.js'))
       .pipe(uglify())
@@ -50,15 +51,15 @@ function libs() {
 function scripts() {
   return gulp.src([
   'temp/lib/libs.js',
-  'dev/**/*.js'
+  'temp/app.js'
   ], { base: './temp/' })
       .pipe(concat('app.js'))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(gulp.dest('content'));
 }
 
 function watch() {
-  gulp.watch('./typescript/app.ts', gulp.series(typescript, scripts));
+  gulp.watch('./dev/app.ts', gulp.series(typescript, scripts));
   gulp.watch('./dev/**/*.scss', styles);
 }
 

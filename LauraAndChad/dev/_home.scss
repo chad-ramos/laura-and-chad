@@ -6,13 +6,13 @@
     .home-border {
         margin: 6rem 0 4rem;
         background-color: rgba(255, 255, 255, 0.75);
-        padding: 4rem;
+        padding: 1rem;
         text-align: center;
     }
 
     .home-card {
         background-color: rgba(93,76,89,0.1);
-        padding: 8rem 0 7rem;
+        padding: 4rem 0 3rem;
 
         h1 {
             @extend .font-secondary;
@@ -43,5 +43,15 @@
 
     .button {
         @extend .font-secondary;
+    }
+
+    @include breakpoint(medium up) {
+        .home-border {
+            padding: 4rem;
+        }
+
+        .home-card {
+            padding: 8rem 0 7rem;
+        }
     }
 }

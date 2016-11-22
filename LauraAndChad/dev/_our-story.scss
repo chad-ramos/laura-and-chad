@@ -1,9 +1,32 @@
 ﻿@import "_settings";
 
 #our-story {
-    padding: 8rem 0;
-    text-align: center;
-    background-color: rgba(93,76,89,0.5);
-    color: $white;
-    @extend .font-primary;
+    position: relative;
+    overflow: hidden;
+    height: 507px;
+
+    .our-story-content {
+        width: 100%;
+        padding: 4rem 0;
+        text-align: center;
+        color: $white;
+        @extend .font-primary;
+        background-color: rgba(93,76,89,0.75);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #our-story-video {
+        width: 100%;
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    @include breakpoint(medium up) {
+        .our-story-content {
+            padding: 8rem 0;
+        }
+    }
 }

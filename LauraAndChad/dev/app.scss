@@ -33,7 +33,12 @@ a.button {
     text-decoration: none;
 }
 
+[type=text], textarea {
+    @extend .font-secondary;
+}
+
 .section-header {
     margin: 0 0 4rem;
     letter-spacing: 0.5rem;
 }
+
