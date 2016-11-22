@@ -1,1 +1,47 @@
-﻿
+﻿@import "_settings";
+
+#home {
+    background: transparent;
+
+    .home-border {
+        margin: 6rem 0 4rem;
+        background-color: rgba(255, 255, 255, 0.75);
+        padding: 4rem;
+        text-align: center;
+    }
+
+    .home-card {
+        background-color: rgba(93,76,89,0.1);
+        padding: 8rem 0 7rem;
+
+        h1 {
+            @extend .font-secondary;
+            font-size: 74px;
+            font-weight: 300;
+            margin: 3rem 0 4rem;
+        }
+
+        p {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+    }
+
+    p.home-date {
+        letter-spacing: 10px;
+        margin: 0 0 4rem;
+    }
+
+    p.home-join-us {
+        margin: 0;
+    }
+
+    p.home-trigger {
+        @extend .font-secondary;
+        margin: 0 0 3rem;
+    }
+
+    .button {
+        @extend .font-secondary;
+    }
+}

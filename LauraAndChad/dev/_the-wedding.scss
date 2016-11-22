@@ -1,1 +1,23 @@
 ﻿
+.the-wedding-content {
+    @extend .font-primary;
+    padding: 8rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 100%;
+    width: 100%;
+
+    h2 {
+        @extend .font-secondary;
+        margin: 0 0 1rem;
+    }
+
+    p {
+        margin: 0 0.5rem 0 0;
+    }
+
+
+    .button {
+        margin: 4rem 0 0;
+    }
+}

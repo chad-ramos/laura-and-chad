@@ -1,1 +1,30 @@
-﻿
+﻿@import "_settings";
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+
+    .top-bar ul {
+        margin: 5px 0 0;
+        background: none;
+    }
+
+    .top-bar {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    a {
+        @extend .font-secondary;
+        color: $dark-gray;
+        font-size: 14px;
+        text-decoration: none;
+        ;
+
+        &:hover {
+            color: $body-font-color;
+        }
+    }
+}

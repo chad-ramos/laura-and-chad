@@ -1,0 +1,19 @@
+﻿@import "_settings";
+@import "../bower_components/foundation-sites/scss/foundation";
+
+#rsvp {
+    @extend .font-primary;
+    padding: 8rem 0 6rem;
+    background: $primary-color;
+    text-align: center;
+    color: $white;
+
+    label {
+        text-align: left;
+        color: $white;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}

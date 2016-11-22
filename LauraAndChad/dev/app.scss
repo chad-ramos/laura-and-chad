@@ -1,11 +1,39 @@
 ﻿@import "_normalize";
 @import "_settings";
 @import "../bower_components/foundation-sites/scss/foundation";
+@include foundation-everything;
+@import "../bower_components/font-awesome/scss/font-awesome";
 @import "nav";
 @import "home";
 @import "our-story";
 @import "the-wedding";
 @import "getting-there";
 @import "registry";
+@import "rsvp";
 @import "footer";
 
+.font-secondary {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-primary {
+    p, a:not(.button), label {
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+}
+
+a {
+    text-decoration: underline;
+}
+
+a.button {
+    @extend .font-secondary;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.section-header {
+    margin: 0 0 4rem;
+    letter-spacing: 0.5rem;
+}
