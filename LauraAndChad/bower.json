@@ -1,0 +1,30 @@
+{
+  "authors": [
+    "Chad Ramos <chad@pioneercode.com>"
+  ],
+  "dependencies": {
+    "font-awesome": "4.6.1",
+    "foundation-sites": "^6.2.3",
+    "parallax.js": "^1.4.2"
+  },
+  "description": "Wedding Site",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "wwwroot/lib",
+    "test",
+    "tests"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "es6"
+  ],
+  "name": "Wedding Site",
+  "private": true,
+  "resolutions": {
+    "foundation-sites": "^6.2.3",
+    "font-awesome": "^4.6.3"
+  },
+  "version": "0.1.0"
+}
