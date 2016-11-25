@@ -122,6 +122,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,7 +136,7 @@
     <Content Include="Content\images\video.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="gulpfile.js" />
+    <None Include="gulpfile.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -154,13 +155,14 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-    <Content Include="bower.json" />
-    <Content Include="package.json" />
-    <Content Include="dev\app.scss" />
-    <Content Include="dev\_settings.scss" />
-    <Content Include="dev\_normalize.scss" />
-    <Content Include="tsconfig.json" />
+    <None Include="packages.config" />
+    <None Include="bower.json" />
+    <None Include="package.json" />
+    <None Include="dev\app.scss" />
+    <None Include="dev\_settings.scss" />
+    <None Include="dev\_normalize.scss" />
+    <None Include="tsconfig.json" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Registry.cshtml" />
@@ -184,47 +186,47 @@
     <Content Include="Views\Home\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_footer.scss" />
+    <None Include="dev\_footer.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_getting-there.scss" />
+    <None Include="dev\_getting-there.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_home.scss" />
+    <None Include="dev\_home.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_nav.scss" />
+    <None Include="dev\_nav.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_our-story.scss" />
+    <None Include="dev\_our-story.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_registry.scss" />
+    <None Include="dev\_registry.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_the-wedding.scss" />
+    <None Include="dev\_the-wedding.scss" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="dev\app.ts" />
-    <TypeScriptCompile Include="typings\globals\foundation-sites\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
-    <TypeScriptCompile Include="typings\index.d.ts" />
+    <None Include="dev\app.ts" />
+    <None Include="typings\globals\foundation-sites\index.d.ts" />
+    <None Include="typings\globals\jquery\index.d.ts" />
+    <None Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="typings\globals\foundation-sites\typings.json" />
-    <Content Include="typings\globals\jquery\typings.json" />
+    <None Include="typings\globals\foundation-sites\typings.json" />
+    <None Include="typings\globals\jquery\typings.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="typings.json" />
+    <None Include="typings.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Rsvp.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dev\_rsvp.scss" />
+    <None Include="dev\_rsvp.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
