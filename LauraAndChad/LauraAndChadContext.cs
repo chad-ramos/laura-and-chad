@@ -3,8 +3,12 @@ using LauraAndChad.Models;
 
 namespace LauraAndChad
 {
-    public class LauraAndChad : DbContext
+    public class LauraAndChadContext : DbContext
     {
+        public LauraAndChadContext() : base("name=LauraAndChadContext")
+        {
+        }
+
         public DbSet<Rsvp> Rsvps { get; set; }
     }
 }

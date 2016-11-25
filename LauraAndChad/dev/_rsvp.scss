@@ -15,6 +15,25 @@
 
     textarea {
         height: 100px;
+        margin: 0 0 3rem;
+    }
+
+    input[type=submit] {
+        @extend .font-secondary;
+        background-color: $primary-color;
+        color: $white;
+        border: 1px solid $white;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-color;
+            transition: all ease-out 0.25s;
+        }
+    }
+
+    .form-error {
+        font-size: 16px;
+        text-align: left;
     }
 
     @include breakpoint(medium up) {

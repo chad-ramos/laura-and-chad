@@ -1,42 +1,54 @@
-﻿@model LauraAndChad.Models.Rsvp
+﻿@model global::LauraAndChad.Models.Rsvp
 
 <section id="rsvp">
   <div class="row">
     <div class="large-8 large-push-2 columns">
       <h4 class="section-header">RSVP</h4>
-      @using (Html.BeginForm("Rsvp", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+      @if (string.IsNullOrEmpty(ViewBag.RsvpMessage))
+      {
+        <h5>@ViewBag.RsvpMessage</h5>
+      }
+      @using (Html.BeginForm("Rsvp", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { data_abide = "", novalidate = "", }))
       {
           @Html.AntiForgeryToken()
           <div class="row">
             <div class="large-6 columns">
               @Html.LabelFor(m => m.FirstName)
-              @Html.TextBoxFor(m => m.FirstName)
-              @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+              @Html.TextBoxFor(m => m.FirstName, new { required = "" })
+              @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "form-error" })
+              <span class="form-error">First Name Required</span>
             </div>
             <div class="large-6 columns">
               @Html.LabelFor(m => m.LastName)
-              @Html.TextBoxFor(m => m.LastName)
-              @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+              @Html.TextBoxFor(m => m.LastName, new { required = "" })
+              @*@Html.ValidationMessageFor(m => m.LastName, "", new { @class = "form-error" })*@
+              <span class="form-error">Last Name Required</span>
             </div>
           </div>
           <div class="row">
             <div class="large-6 columns">
               @Html.LabelFor(m => m.GuestFirstName)
               @Html.TextBoxFor(m => m.GuestFirstName)
-              @Html.ValidationMessageFor(m => m.GuestFirstName, "", new { @class = "text-danger" })
+              @*@Html.ValidationMessageFor(m => m.GuestFirstName, "", new { @class = "form-error" })*@
             </div>
             <div class="large-6 columns">
               @Html.LabelFor(m => m.GuestLastName)
               @Html.TextBoxFor(m => m.GuestLastName)
-              @Html.ValidationMessageFor(m => m.GuestLastName, "", new { @class = "text-danger" })
+              @*@Html.ValidationMessageFor(m => m.GuestLastName, "", new { @class = "form-error" })*@
             </div>
           </div>
-          @Html.LabelFor(m => m.Email)
-          @Html.TextBoxFor(m => m.Email)
-          @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+          <div class="row">
+            <div class="large-12 columns">
+              @Html.LabelFor(m => m.Email)
+              @Html.TextBoxFor(m => m.Email, new { required = "" })
+              @*@Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-error" })*@
+              <span class="form-error">Email Required</span>
+            </div>
+          </div>
           @Html.LabelFor(m => m.Comments)
           @Html.TextAreaFor(m => m.Comments)
-          @Html.ValidationMessageFor(m => m.Comments, "", new { @class = "text-danger" })
+          @*@Html.ValidationMessageFor(m => m.Comments, "", new { @class = "form-error" })*@
+          <input type="submit" value="SEND" class="button large" />
       }
     </div>
   </div>

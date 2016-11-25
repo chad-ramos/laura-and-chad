@@ -11,14 +11,24 @@ namespace LauraAndChad.Controllers
             return View();
         }
 
-        //
-        // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Rsvp(Rsvp model, string returnUrl)
         {
-            return View("Index");
+            if (!ModelState.IsValid)
+            {
+                return View("Index", model);
+            }
+
+            using (var ctx = new LauraAndChadContext())
+            {
+                ctx.Rsvps.Add(model);
+                await ctx.SaveChangesAsync();
+            }
+
+            ViewBag.RsvpMessage = "RSVP sent!";
+            return Redirect("#rsvp");
         }
     }
 }

@@ -40,6 +40,7 @@ function libs() {
     'bower_components/foundation-sites/dist/plugins/foundation.core.js',
     'bower_components/foundation-sites/dist/plugins/foundation.responsiveToggle.js',
     'bower_components/foundation-sites/dist/plugins/foundation.util.mediaQuery.js',
+    'bower_components/foundation-sites/dist/plugins/foundation.abide.js',
     'bower_components/parallax.js/parallax.js',
     'bower_components/smooth-scroll.js/dist/js/smooth-scroll.min.js'
   ])
@@ -54,7 +55,7 @@ function scripts() {
   'temp/app.js'
   ], { base: './temp/' })
       .pipe(concat('app.js'))
-      //.pipe(uglify())
+      .pipe(uglify())
       .pipe(gulp.dest('content'));
 }
 
