@@ -6,14 +6,9 @@ namespace LauraAndChad.Controllers
 {
     public class HomeController : Controller
     {
-        private static string _anchor = "";
 
         public ActionResult Index(Rsvp model)
         {
-            if (!string.IsNullOrEmpty(_anchor))
-            {
-                ViewBag.Anchor = _anchor;
-            }
             return View(model);
         }
 
@@ -25,7 +20,7 @@ namespace LauraAndChad.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.Anchor = "#rsvp";
-                return View("Index", model);
+                return View("Index");
             }
 
             using (var ctx = new LauraAndChadContext())
@@ -35,7 +30,7 @@ namespace LauraAndChad.Controllers
             }
 
             ViewBag.Anchor = "#rsvp";
-            return View("Index", model);
+            return View("Index");
         }
     }
 }
