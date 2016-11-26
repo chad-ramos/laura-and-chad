@@ -15,6 +15,11 @@
   @RenderBody()
   <script>
     smoothScroll.init();
+    @if (!string.IsNullOrEmpty(ViewBag.Anchor))
+    {
+      <text>var anchor = document.querySelector('@Html.Raw(ViewBag.Anchor)');</text>
+      <text>smoothScroll.animateScroll(anchor);</text>
+    }
   </script>
 </body>
 </html>

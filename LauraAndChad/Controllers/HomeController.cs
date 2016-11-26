@@ -6,18 +6,25 @@ namespace LauraAndChad.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private static string _anchor = "";
+
+        public ActionResult Index(Rsvp model)
         {
-            return View();
+            if (!string.IsNullOrEmpty(_anchor))
+            {
+                ViewBag.Anchor = _anchor;
+            }
+            return View(model);
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Rsvp(Rsvp model, string returnUrl)
+        public async Task<ActionResult> Rsvp(Rsvp model)
         {
             if (!ModelState.IsValid)
             {
+                ViewBag.Anchor = "#rsvp";
                 return View("Index", model);
             }
 
@@ -27,8 +34,8 @@ namespace LauraAndChad.Controllers
                 await ctx.SaveChangesAsync();
             }
 
-            ViewBag.RsvpMessage = "RSVP sent!";
-            return Redirect("#rsvp");
+            ViewBag.Anchor = "#rsvp";
+            return View("Index", model);
         }
     }
 }

@@ -4,9 +4,9 @@
   <div class="row">
     <div class="large-8 large-push-2 columns">
       <h4 class="section-header">RSVP</h4>
-      @if (string.IsNullOrEmpty(ViewBag.RsvpMessage))
+      @if (TempData["RsvpMessage"] != null)
       {
-        <h5>@ViewBag.RsvpMessage</h5>
+        <h5>@TempData["RsvpMessage"].ToString()</h5>
       }
       @using (Html.BeginForm("Rsvp", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { data_abide = "", novalidate = "", }))
       {
@@ -21,7 +21,7 @@
             <div class="large-6 columns">
               @Html.LabelFor(m => m.LastName)
               @Html.TextBoxFor(m => m.LastName, new { required = "" })
-              @*@Html.ValidationMessageFor(m => m.LastName, "", new { @class = "form-error" })*@
+              @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "form-error" })
               <span class="form-error">Last Name Required</span>
             </div>
           </div>
@@ -29,25 +29,25 @@
             <div class="large-6 columns">
               @Html.LabelFor(m => m.GuestFirstName)
               @Html.TextBoxFor(m => m.GuestFirstName)
-              @*@Html.ValidationMessageFor(m => m.GuestFirstName, "", new { @class = "form-error" })*@
+              @Html.ValidationMessageFor(m => m.GuestFirstName, "", new { @class = "form-error" })
             </div>
             <div class="large-6 columns">
               @Html.LabelFor(m => m.GuestLastName)
               @Html.TextBoxFor(m => m.GuestLastName)
-              @*@Html.ValidationMessageFor(m => m.GuestLastName, "", new { @class = "form-error" })*@
+              @Html.ValidationMessageFor(m => m.GuestLastName, "", new { @class = "form-error" })
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               @Html.LabelFor(m => m.Email)
               @Html.TextBoxFor(m => m.Email, new { required = "" })
-              @*@Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-error" })*@
+              @Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-error" })
               <span class="form-error">Email Required</span>
             </div>
           </div>
           @Html.LabelFor(m => m.Comments)
           @Html.TextAreaFor(m => m.Comments)
-          @*@Html.ValidationMessageFor(m => m.Comments, "", new { @class = "form-error" })*@
+          @Html.ValidationMessageFor(m => m.Comments, "", new { @class = "form-error" })
           <input type="submit" value="SEND" class="button large" />
       }
     </div>

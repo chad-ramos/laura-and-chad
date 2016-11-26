@@ -7,12 +7,12 @@ namespace LauraAndChad.Models
         [Key] 
         public int RsvpId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "First Name Required")]
         [Display(Name = "* First Name")]
         [StringLength(100)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last Name Required")]
         [Display(Name = "* Last Name")]
         [StringLength(100)]
         public string LastName { get; set; }
@@ -25,7 +25,7 @@ namespace LauraAndChad.Models
         [StringLength(100)]
         public string GuestLastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Email Required")]
         [Display(Name = "* Email")]
         [EmailAddress]
         [StringLength(254)]
