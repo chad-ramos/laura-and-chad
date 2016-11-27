@@ -7,9 +7,9 @@ namespace LauraAndChad.Controllers
     public class HomeController : Controller
     {
 
-        public ActionResult Index(Rsvp model)
+        public ActionResult Index()
         {
-            return View(model);
+            return View();
         }
 
         [HttpPost]
@@ -20,7 +20,7 @@ namespace LauraAndChad.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.Anchor = "#rsvp";
-                return View("Index");
+                return View("Index", model);
             }
 
             using (var ctx = new LauraAndChadContext())
@@ -30,7 +30,7 @@ namespace LauraAndChad.Controllers
             }
 
             ViewBag.Anchor = "#rsvp";
-            return View("Index");
+            return View("Index", model);
         }
     }
 }
