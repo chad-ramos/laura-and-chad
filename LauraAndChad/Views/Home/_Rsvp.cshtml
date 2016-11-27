@@ -17,13 +17,13 @@
               @Html.LabelFor(m => m.FirstName)
               @Html.TextBoxFor(m => m.FirstName, new { required = "" })
               @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "form-error" })
-              @*<span class="form-error">First Name Required</span>*@
+              <span class="form-error">First Name Required</span>
             </div>
             <div class="large-6 columns">
               @Html.LabelFor(m => m.LastName)
               @Html.TextBoxFor(m => m.LastName, new { required = "" })
               @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "form-error" })
-              @*<span class="form-error">Last Name Required</span>*@
+              <span class="form-error">Last Name Required</span>
             </div>
           </div>
           <div class="row">
@@ -41,8 +41,9 @@
           <div class="row">
             <div class="large-12 columns">
               @Html.LabelFor(m => m.Email)
-              @Html.TextBoxFor(m => m.Email, new { required = "" })
-              @Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-error", pattern = "email" })
+              @Html.TextBoxFor(m => m.Email, new { required = "", pattern = "email" })
+              @Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-error"})
+              <span class="form-error">Email field is not a valid e-mail address</span>
             </div>
           </div>
           @Html.LabelFor(m => m.Comments)
