@@ -11,6 +11,7 @@
   <script src="~/Content/app.js"></script>
 </head>
 <body>
+  <input type="hidden" value="d9197f1e-e49b-4d41-9851-440cfa63abb7">
   <input type="hidden" class="no-js top-bar form-error is-visible" />
   <div class="validation-summary-errors" style="display: none;">
     <ul>
@@ -21,10 +22,10 @@
   <script>
     smoothScroll.init();
     @if (!string.IsNullOrEmpty(ViewBag.Anchor))
-    {
-      <text>var anchor = document.querySelector('@Html.Raw(ViewBag.Anchor)');</text>
-      <text>smoothScroll.animateScroll(anchor);</text>
-    }
+  {
+    <text>var anchor = document.querySelector('@Html.Raw(ViewBag.Anchor)');</text>
+    <text>smoothScroll.animateScroll(anchor);</text>
+  }
   </script>
 </body>
 </html>
