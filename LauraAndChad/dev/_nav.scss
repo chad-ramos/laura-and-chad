@@ -21,8 +21,10 @@ nav {
         color: $body-font-color;
     }
 
-    .title-bar button {
-        margin: 10px 16px;
+    .title-bar i {
+        margin: 0.25rem 0.5rem;
+        float: right;
+        font-size: 24px;
     }
 
     a {
@@ -36,6 +38,15 @@ nav {
         }
     }
 
+    .menu li {
+        display: block;
+    }
+
+    @include breakpoint(medium up) {
+        .menu li {
+            display: table-cell;
+        }
+    }
 }
 
 .no-js .top-bar {
