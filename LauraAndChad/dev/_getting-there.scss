@@ -17,10 +17,13 @@
         left: 0;
 
         h2 {
-            font-family: 'Great Vibes', cursive;
             font-size: 3rem;
             margin: 0 0 2rem;
             letter-spacing: 2px;
+        }
+
+        a {
+            color: $white;
         }
     }
 
@@ -32,7 +35,7 @@
     }
 
     @include breakpoint(medium up) {
-         height: 1001px;
+        height: 1001px;
 
         .getting-there-content {
             h2 {

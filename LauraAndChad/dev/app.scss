@@ -26,6 +26,9 @@
 a {
     text-decoration: underline;
 }
+.margin-zero {
+    margin: 0;
+}
 
 a.button {
     @extend .font-secondary;
