@@ -3,7 +3,6 @@
 #getting-there {
     position: relative;
     overflow: hidden;
-    height: 1127px;
 
     .getting-there-content {
         width: 100%;
@@ -35,7 +34,7 @@
     }
 
     @include breakpoint(medium up) {
-        height: 1001px;
+        height: 740px;
 
         .getting-there-content {
             h2 {
