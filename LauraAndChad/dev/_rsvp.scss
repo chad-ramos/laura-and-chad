@@ -7,6 +7,10 @@
     background: $primary-color;
     text-align: center;
     color: $white;
+    // Remove when form goes back up
+    p {
+        font-size: 19px;
+    }
 
     label {
         text-align: left;
