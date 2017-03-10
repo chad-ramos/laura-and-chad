@@ -1,45 +1,48 @@
 ﻿@import "_settings";
 
 #getting-there {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  height: 740px;
+
+  .getting-there-content {
+    width: 100%;
+    padding: 8rem 0;
+    text-align: center;
+    color: $white;
+    @extend .font-primary;
+    background-color: rgba(93,76,89,0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    h2 {
+      font-size: 3rem;
+      margin: 0 0 2rem;
+      letter-spacing: 2px;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  #getting-there-video {
+    display: none;
+  }
+
+  @include breakpoint(medium up) {
+    #getting-there-video {
+      width: 100%;
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+    }
 
     .getting-there-content {
-        width: 100%;
-        padding: 8rem 0;
-        text-align: center;
-        color: $white;
-        @extend .font-primary;
-        background-color: rgba(93,76,89,0.75);
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        h2 {
-            font-size: 3rem;
-            margin: 0 0 2rem;
-            letter-spacing: 2px;
-        }
-
-        a {
-            color: $white;
-        }
+      h2 {
+        font-size: 6rem;
+      }
     }
-
-    #getting-there-video {
-        width: 100%;
-        display: block;
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    @include breakpoint(medium up) {
-        height: 740px;
-
-        .getting-there-content {
-            h2 {
-                font-size: 6rem;
-            }
-        }
-    }
+  }
 }
