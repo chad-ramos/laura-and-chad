@@ -3,9 +3,9 @@
   <div class="row">
     <div class="large-8 large-push-2 columns">
       <h4 class="section-header">RSVP</h4>
-      <p>Invitations are coming soon!</p>
-      <p>Be sure to check back to RSVP online.</p>
-      @*@using (Html.BeginForm("Rsvp", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { data_abide = "", novalidate = "" }))
+      @*<p>Invitations are coming soon!</p>
+        <p>Be sure to check back to RSVP online.</p>*@
+      @using (Html.BeginForm("Rsvp", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { data_abide = "", novalidate = "" }))
       {
           @Html.ValidationSummary()
           <h5 style="display:none"></h5>
@@ -28,18 +28,18 @@
               <span class="form-error">Last Name Required</span>
             </div>
           </div>
-          <div class="row">
-            <div class="large-6 columns">
-              @Html.LabelFor(m => m.GuestFirstName)
-              @Html.TextBoxFor(m => m.GuestFirstName)
-              @Html.ValidationMessageFor(m => m.GuestFirstName, "", new { @class = "form-error" })
-            </div>
-            <div class="large-6 columns">
-              @Html.LabelFor(m => m.GuestLastName)
-              @Html.TextBoxFor(m => m.GuestLastName)
-              @Html.ValidationMessageFor(m => m.GuestLastName, "", new { @class = "form-error" })
-            </div>
-          </div>
+          @*<div class="row">
+              <div class="large-6 columns">
+                @Html.LabelFor(m => m.GuestFirstName)
+                @Html.TextBoxFor(m => m.GuestFirstName)
+                @Html.ValidationMessageFor(m => m.GuestFirstName, "", new { @class = "form-error" })
+              </div>
+              <div class="large-6 columns">
+                @Html.LabelFor(m => m.GuestLastName)
+                @Html.TextBoxFor(m => m.GuestLastName)
+                @Html.ValidationMessageFor(m => m.GuestLastName, "", new { @class = "form-error" })
+              </div>
+            </div>*@
           <div class="row">
             <div class="large-12 columns">
               @Html.LabelFor(m => m.Email)
@@ -52,7 +52,7 @@
           @Html.TextAreaFor(m => m.Comments)
           @Html.ValidationMessageFor(m => m.Comments, "", new { @class = "form-error" })
           <input type="submit" value="SEND" class="button large" />
-      }*@
+      }
     </div>
   </div>
 </section>
